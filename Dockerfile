@@ -20,6 +20,8 @@ RUN python3 -m venv /home/doc-bd-a1/venv
 RUN /home/doc-bd-a1/venv/bin/pip install --upgrade pip && \
     /home/doc-bd-a1/venv/bin/pip install pandas numpy seaborn matplotlib scikit-learn scipy
 
+# Copy dataset to the container
+COPY Titanic_Dataset.csv /home/doc-bd-a1/
 # Set the working directory inside the container
 WORKDIR /home/doc-bd-a1
 
